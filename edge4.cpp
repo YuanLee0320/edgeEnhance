@@ -1,3 +1,4 @@
+#include <ac_channel.h>
 #include <ac_int.h>
 #include <iostream>
 
