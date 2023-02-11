@@ -54,8 +54,13 @@ void edge_enhancement(ac_channel<pixel_type> &input, ac_channel<pixel_type> &out
 					r = 2 * LINE_BUFFER_SIZE - r - 1;
 				}
 				if (c >= WINDOW_SIZE) {
-					c = 2 * WINDOW_SIZE - c -
-						1;
+					c = 2 * WINDOW_SIZE - c - 1;
+				}
+				if (r < 0) {
+					r = -r;
+				}
+				if (c < 0) {
+					c = -c;
 				}
 				window[i][j] = line_buffer[r][c];
 			}
